@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Pen+Script&display=swap');
+
+/*removing margin and setting background color*/
+body {
+  margin: 0;
+  background-color: #dedede;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*styling banner, grayscale the background image*/
+#banner {
+  width: 100%;
+  height: 28vmin;
+  background-image: url('https://image.freepik.com/free-photo/squared-paper-texture_1154-677.jpg');
+  filter: grayscale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*styling the "Tiny Homes"*/
+#title {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
+  color: #333;
+  font-size: 12vmin;
+}
+
+/*setting the size of the grid*/
+#contentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 8vmin;
+  grid-row-gap: 8vmin;
+  padding: 5vmin;
+}
+
+/*adding padding to the items within the div*/
+.contentItem {
+  padding: 2vmin;
+}
+
+/*styling the image*/
+.houseImage {
+  object-fit: cover;
+  width: 100%;
+  height: 30vmin;
+  object-position: center;
+}
+
+/*styling the name of each tiny home*/
+.contentTitle {
+  font-family: 'Nanum Pen Script', cursive;
+  font-weight: 500;
+  color: #333;
+  font-size: 8vmin;
+  text-align: center;
+  padding: 2vmin 0 2vmin 0;
+}
+
+/*removing the default margin*/
+H3, H4 {
+  margin: 0;
+}
+
+/*styling the details about each tiny home*/
+.contentFeatures {
+  margin: 0;
+  color: #333;
+  font-family: 'Cabin', sans-serif;
+  width: 100%;
+  font-weight: 400;
+  font-size: 3vmin;
+  line-height: 2em;
+}
+
+/*styling the source at the bottom of the page*/
+p {
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+/*media query for smaller screen: two columns, resizing image*/
+@media screen and (max-width: 1029px) {
+
+  #contentGrid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding: 7vmin;
+  }
+
+  .houseImage {
+    height: 30vmin;
+  }
+}
+
+/*media query for phone screen: one column, resizing image, and font sizes*/
+@media screen and (max-width: 600px) {
+
+  #contentGrid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 10vmin;
+  }
+
+  .houseImage {
+    height: 50vmin;
+  }
+
+  .contentFeatures {
+    font-size: 4vmin;
+  }
+
+  .contentTitle {
+    font-size: 12vmin;
+  }
+
+}
